@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Effect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wallpaper">
+    <h1>Super Heroes</h1>
+    <button class="toggle btn">Toggle</button>
+    <p>Graphic by Brandi Nevares</p>
+    <div class="panel glass">
+      <div class="avatar">
+        <img src="src/img/profile.jpg" alt="Foto de perfil">
+      </div>
+      <div class="time"></div>
+      <div class="tiles">
+        <div class="tile marvel"></div>
+        <div class="tile dc"></div>
+        <div class="tile quadrinhos"></div>
+        <div class="tile games"></div>
+      </div>
+      <div class="buttons">
+        <button class="btn">Adicionar Categoria</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    const toggleBtn = document.querySelector('.toggle');
+    const panel = document.querySelector('.panel');
+    const time = document.querySelector('.time');
+    console.log(time)
+    const toggle = (e) => {
+      e.preventDefault();
+      panel.classList.toggle('hidden')
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', toggle)
+    }
+    if (time) {
+      setInterval(() => {
+        const date = new Date();
+        const currentTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map((v) => `0${v}`.slice(-2)).join(':')
+        time.innerText = currentTime;
+      }, 1000)
+    }
+  </script>
+</body>
+
+</html>

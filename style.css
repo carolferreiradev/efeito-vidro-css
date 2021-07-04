@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-shadow: 4px 4px black;
+  font-size: 5rem;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  backdrop-filter: blur(2px);
+}
+.btn {
+  cursor: pointer;
+  background-color: rgba(4, 3, 49, 0.644);
+  padding: 0.5em 2em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 12px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.toggle{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+p{
+  position: fixed;
+  font-size: 12px;
+  right: 10px;
+  bottom: 1px;
+}
+
+.wallpaper {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgb(100, 116, 122) url('src/img/Wallpaper.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.panel {
+  margin: 20px;
+  padding: 20px;
+  width: 50vw;
+  /* 100% menos o valor da margem */
+  height: calc(100% - 40px);
+  border-radius: 10px;
+  position: relative;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: 1s ease-in-out;
+}
+
+.panel.hidden {
+  left: calc(-50vw - 20px);
+}
+
+.panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.glass{
+  backdrop-filter: blur(12px);
+}
+
+.panel .avatar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.panel .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.panel .time {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: rgb(4, 3, 49);
+}
+
+.panel .tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.panel .tiles .tile {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  min-height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.panel .tiles .tile.marvel {
+  background: url('src/img/marvel.jpg') no-repeat center;
+}
+.panel .tiles .tile.dc{
+  background: url('src/img/dc.jpg') no-repeat center;
+}
+.panel .tiles .tile.games{
+  background: url('src/img/quadrinhos.jpg') no-repeat center; 
+}
+.panel .tiles .tile.quadrinhos{
+  background: url('src/img/games.jpg') no-repeat center; 
+}
+
+.panel .tiles .tile.marvel,
+.panel .tiles .tile.games,
+.panel .tiles .tile.quadrinhos,
+.panel .tiles .tile.dc {
+  background-size: cover;
+}
+.panel .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.panel .top-stories {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px 0;
+  height: 100%;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 10px;
+}

@@ -7,8 +7,9 @@
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projetoOnline">Projeto Online</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
-
-![enter image description here](https://github.com/carolferreiradev/efeito-vidro-css/blob/master/src/20210704_173402.mp4) 
+<video width="320" height="240" controls>
+  <source src="https://github.com/carolferreiradev/efeito-vidro-css/blob/master/src/20210704_173402.mp4" type="video/mp4">
+</video>
 
 ## 🛠 Tecnologias
 
